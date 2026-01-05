@@ -10,3 +10,36 @@ main{
     width:80%;
     margin:5px;
 }
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+}
+
+/* Base */
+main {
+  padding: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Grands écrans (992px et +) */
+@media (min-width: 992px) {
+  main {
+    /* 3 carrés de 30vh, centrés, comme l'exemple */
+    grid-template-columns: repeat(3, 30vh);
+    justify-content: center; /* centre le bloc de 3 colonnes */
+  }
+
+  main article {
+    width: 30vh;               /* carré */
+    height: 30vh;              /* carré */
+    background-color: #f7b801; /* couleur */
+  }
+}
